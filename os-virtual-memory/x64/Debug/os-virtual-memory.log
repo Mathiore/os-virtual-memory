@@ -1,0 +1,3 @@
+﻿  os-virtual-memory.cpp
+C:\Users\ismar\OneDrive\Área de Trabalho\repos\os-virtual-memory\os-virtual-memory\os-virtual-memory.cpp(117,9): warning C4101: 'value': variável local não referenciada
+  os-virtual-memory.vcxproj -> C:\Users\ismar\OneDrive\Área de Trabalho\repos\os-virtual-memory\x64\Debug\os-virtual-memory.exe

@@ -56,12 +56,12 @@ int CalcularPagina(int bits, string binario) {
 
     if (bits == 16) {
         // Calcular o número da página
-        string pageBinary = binario.substr(0, 4);  // 4 primeiros caracteres para o número da página
-        pageNumber = bitset<4>(pageBinary).to_ulong();      // Converter binário para decimal
+        string pageBinary = binario.substr(0, 8);  // 4 primeiros caracteres para o número da página
+        pageNumber = bitset<8>(pageBinary).to_ulong();      // Converter binário para decimal
     }
     else if (bits == 32) {
         // Calcular o número da página
-        string pageBinary = binario.substr(0, 20);  // 4 primeiros caracteres para o número da página
+        string pageBinary = binario.substr(0, 20);  // 20 primeiros caracteres para o número da página
         pageNumber = bitset<20>(pageBinary).to_ulong();      // Converter binário para decimal
     }
     return pageNumber;
@@ -72,8 +72,8 @@ int CalcularOffset(int bits, string binario) {
 
     if (bits == 16) {
         // Calcular o deslocamento
-        string offsetBinary = binario.substr(4);    // Restante para o deslocamento
-        offset = bitset<12>(offsetBinary).to_ulong();      // Converter binário para decimal
+        string offsetBinary = binario.substr(8);    // Restante para o deslocamento
+        offset = bitset<8>(offsetBinary).to_ulong();      // Converter binário para decimal
     }
     else if (bits == 32) {
         // Calcular o deslocamento
